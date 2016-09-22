@@ -27,9 +27,9 @@ define sysctl::configuration (
 
   # If we have a prefix, then add the dash to it
   if $prefix {
-    $_sysctl_d_file = "${prefix}-${variable}${suffix}"
+    $_sysctl_d_file = "${prefix}-${title}${suffix}"
   } else {
-    $_sysctl_d_file = "${variable}${suffix}"
+    $_sysctl_d_file = "${title}${suffix}"
   }
 
   # Some sysctl keys contain a slash, which is not valid in a filename.
